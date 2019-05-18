@@ -571,9 +571,6 @@ CONTEXT_PROCESSORS = [
     'django.contrib.messages.context_processors.messages',
     'sekizai.context_processors.sekizai',
 
-    # Hack to get required link URLs to password reset templates
-    'edxmako.shortcuts.marketing_link_context_processor',
-
     # Shoppingcart processor (detects if request.user has a cart)
     'shoppingcart.context_processor.user_has_cart_context_processor',
 
@@ -1989,6 +1986,7 @@ YOUTUBE_API_KEY = None
 # remember to check that you are not creating new
 # RemovedInDjango19Warnings in the test logs.
 INSTALLED_APPS = [
+    'django_extensions',
     # Standard ones that are always installed...
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -2280,7 +2278,7 @@ INSTALLED_APPS = [
     'csrf.apps.CsrfAppConfig',  # Enables frontend apps to retrieve CSRF tokens.
 ]
 
-######################### CSRF #########################################
+######################### CSRF #########################################z
 
 # Forwards-compatibility with Django 1.7
 CSRF_COOKIE_AGE = 60 * 60 * 24 * 7 * 52
