@@ -5,6 +5,6 @@ app_name = 'jwt_auth_api'
 
 urlpatterns = [
     url(r'^jwt_auth/refresh/', refresh_jwt_token, name='jwt_auth_api'),
-    url(r'^jwt_auth/verify/', verify_jwt_token, name='jwt-authapi'),
-    url(r'^jwt_auth/token/', obtain_jwt_token, name='jwt-auth-api'),
+    url(r'^jwt_auth/verify/', verify_jwt_token, name='jwt_auth_api'),
+    url(r'^jwt_auth/token/', obtain_jwt_token, name='jwt_auth_api'),
 ]
