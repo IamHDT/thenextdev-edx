@@ -71,6 +71,9 @@ urlpatterns = [
     # subsumed by api/user listed below.
     url(r'^user_api/', include('openedx.core.djangoapps.user_api.legacy_urls')),
 
+    # jwt auth api
+    url(r'^user_api/', include('lms.djangoapps.jwt-auth.urls', namespace='jwt_auth_api')),
+
     url(r'^notifier_api/', include('notifier_api.urls')),
 
     # Enrollment API RESTful endpoints
